@@ -49,6 +49,8 @@ Then, run it as follows:
   passed in via the `--config.role-arn` option. This option also
   allows for cross-account access, depending on which account
   the role is defined in.
+* When running in an EKS cluster, you can use pod identity for authentication by setting the `--config.use-eks-pod-identity` 
+  flag to `true`. This will use the pod's IAM role for authentication instead of environment variables or instance profile credentials.
 * Start the program, using the command line option
   `-config.write-to` to point the program to the specific
   folder that your Prometheus master can read from.
